@@ -345,7 +345,7 @@ Interpreter.prototype.runCycle = function(instPerCycle) {
                     break;
                 case '-':
                     if(--this.memory[this.mem_ptr] < 0) {
-                        throw new ErrorResult("NEG");
+                        this.memory[this.mem_ptr] = 255;
                     }
                     break;
                 case '.':
